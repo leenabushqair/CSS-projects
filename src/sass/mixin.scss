@@ -1,0 +1,16 @@
+@mixin mQmax($args...){
+  @if length($args) == 1{
+    @media screen and (max-width: nth($args, 1)){
+      @content;
+    }
+  }
+}  
+
+@mixin mQ($args...){
+    @if length($args) == 1{
+      @media screen and (min-width: nth($args, 1)){
+        @content;
+      }
+    }
+}  
+
